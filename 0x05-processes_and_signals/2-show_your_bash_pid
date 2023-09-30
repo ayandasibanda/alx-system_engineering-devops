@@ -2,5 +2,5 @@
 # shellcheck disable=SC2009
 
 # Display lines containing the word "bash" and filter out the grep command
-ps -aux | grep bash
+./1-list_your_processes | grep "bash"
 
