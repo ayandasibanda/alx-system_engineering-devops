@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script displays information from /etc/passwd using a while loop
+
+# Read /etc/passwd line by line using a while loop
+while IFS=: read -r username x uid gid gecos home shell; do
+    # Display username, user id, and home directory path
+    echo "$username:$uid:$home"
+done < /etc/passwd
+
