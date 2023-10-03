@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script tells the story of the users from /etc/passwd using a while loop and IFS
+
+# Read /etc/passwd line by line using a while loop
+while IFS=: read -r username x uid gid gecos home shell; do
+    # Display the story of each user
+    echo "The user $username is part of the $gid gang, lives in $home and rides $shell. $uid's place is protected by the passcode x, more info about the user here: $gecos"
+done < /etc/passwd
+
