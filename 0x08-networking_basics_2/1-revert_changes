@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script reverts the changes made to localhost and facebook.com IP addresses.
+
+# Revert localhost to 127.0.0.1
+sudo sed -i 's/127.0.0.2/127.0.0.1/' /etc/hosts
+
+# Revert facebook.com to its original IP address (assuming it was 157.240.11.35)
+sudo sed -i 's/8.8.8.8/157.240.11.35/' /etc/hosts
+
